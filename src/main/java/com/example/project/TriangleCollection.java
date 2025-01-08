@@ -70,20 +70,18 @@ public double totalPerimeter() {
 
 public void shiftTriangles(int increment) {
   for (Triangle triangle : this.collection) {
-    // Get the points of the triangle
+    
     Point p1 = triangle.getp1();
     Point p2 = triangle.getp2();
     Point p3 = triangle.getp3();
+    p1.setX(p1.getX() + increment);  
+    p1.setY(p1.getY() + increment); 
 
-    // Shift x and y coordinates by the increment value
-    p1.setX(p1.getX() + increment);  // Update x for p1
-    p1.setY(p1.getY() + increment);  // Update y for p1
+    p2.setX(p2.getX() + increment); 
+    p2.setY(p2.getY() + increment); 
 
-    p2.setX(p2.getX() + increment);  // Update x for p2
-    p2.setY(p2.getY() + increment);  // Update y for p2
-
-    p3.setX(p3.getX() + increment);  // Update x for p3
-    p3.setY(p3.getY() + increment);  // Update y for p3
+    p3.setX(p3.getX() + increment);  
+    p3.setY(p3.getY() + increment); 
   }
 }
 
